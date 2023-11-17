@@ -25,6 +25,12 @@ struct Connection
 		from = _from;
 		cost = 1;
 	}
+	Connection(Node* _to, Node* _from,float _cost)
+	{
+		to = _to;
+		from = _from;
+		cost = _cost;
+	}
 	Node* from;
 	Node* to;
 	int cost = 0;
@@ -35,7 +41,7 @@ class Graph
 public:
 	Graph(Grid* grid);
 	vector<Node*> nodes;
-	Connection* CheckAndCreateConnection(Grid* grid, Node* from, int x, int y);
+	Connection* CheckAndCreateConnection(Grid* grid, Node* from, int x, int y,float cost);
 	Node* GetNodeFromTerrainIndex(Vector2D terrainIndex);
 	Node* GetNodeFromVector2D(Vector2D position);
 	void DebugGraphNode(int node);

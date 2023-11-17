@@ -1,3 +1,6 @@
 C:\Users\pablo.fernandez\Desktop\AA3\SDL_Pathfinding\SDL_Pathfinding\Debug\SDL_Pathfinding.vcxproj.MdMergeInputs.cache
 C:\Users\pablo.fernandez\Desktop\AA3\SDL_Pathfinding\SDL_Pathfinding\Debug\SDL_Pathfinding.vcxproj.cppwinrt_plat.cache
 C:\Users\pablo.fernandez\Desktop\AA3\SDL_Pathfinding\SDL_Pathfinding\Debug\SDL_Pathfinding.vcxproj.cppwinrt_comp.cache
+C:\Users\pablo.fernandez\Desktop\IA\SDL_Pathfinding\SDL_Pathfinding\Debug\SDL_Pathfinding.vcxproj.MdMergeInputs.cache
+C:\Users\pablo.fernandez\Desktop\IA\SDL_Pathfinding\SDL_Pathfinding\Debug\SDL_Pathfinding.vcxproj.cppwinrt_plat.cache
+C:\Users\pablo.fernandez\Desktop\IA\SDL_Pathfinding\SDL_Pathfinding\Debug\SDL_Pathfinding.vcxproj.cppwinrt_comp.cache
