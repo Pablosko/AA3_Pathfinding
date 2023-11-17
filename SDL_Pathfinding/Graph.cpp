@@ -24,28 +24,28 @@ Graph::Graph(Grid* grid)
 			if (grid->terrain[y][x] != 0)
 			{
 				Node* node = GetNodeFromTerrainIndex(Vector2D(x, y));
-				Connection* connection = CheckAndCreateConnection(grid, node, x + 1, y);
+				Connection* connection = CheckAndCreateConnection(grid, node, x + 1, y,1);
 				if (connection != nullptr)
 					node->conections.push_back(connection);
-				connection = CheckAndCreateConnection(grid, node, x + 1, y + 1);
+				connection = CheckAndCreateConnection(grid, node, x + 1, y + 1,2);
 				if (connection != nullptr)
 					node->conections.push_back(connection);
-				connection = CheckAndCreateConnection(grid, node, x + 1, y - 1);
+				connection = CheckAndCreateConnection(grid, node, x + 1, y - 1,2);
 				if (connection != nullptr)
 					node->conections.push_back(connection);
-				connection = CheckAndCreateConnection(grid, node, x, y + 1);
+				connection = CheckAndCreateConnection(grid, node, x, y + 1,1);
 				if (connection != nullptr)
 					node->conections.push_back(connection);
-				connection = CheckAndCreateConnection(grid, node, x, y - 1);
+				connection = CheckAndCreateConnection(grid, node, x, y - 1,1);
 				if (connection != nullptr)
 					node->conections.push_back(connection);
-				connection = CheckAndCreateConnection(grid, node, x - 1, y);
+				connection = CheckAndCreateConnection(grid, node, x - 1, y,1);
 				if (connection != nullptr)
 					node->conections.push_back(connection);
-				connection = CheckAndCreateConnection(grid, node, x - 1, y + 1);
+				connection = CheckAndCreateConnection(grid, node, x - 1, y + 1,2);
 				if (connection != nullptr)
 					node->conections.push_back(connection);
-				connection = CheckAndCreateConnection(grid, node, x - 1, y - 1);
+				connection = CheckAndCreateConnection(grid, node, x - 1, y - 1,2);
 				if (connection != nullptr)
 					node->conections.push_back(connection);
 
@@ -54,7 +54,7 @@ Graph::Graph(Grid* grid)
 	}
 }
 
-Connection* Graph::CheckAndCreateConnection(Grid* grid,Node* from,int x, int y)
+Connection* Graph::CheckAndCreateConnection(Grid* grid,Node* from,int x, int y,float cost)
 {
 	if (grid->isValidCell(Vector2D(x, y)))
 		return new Connection(GetNodeFromTerrainIndex(Vector2D(x,y)),from);

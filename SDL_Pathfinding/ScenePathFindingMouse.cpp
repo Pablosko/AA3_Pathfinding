@@ -69,13 +69,11 @@ void ScenePathFindingMouse::update(float dtime, SDL_Event *event)
 				path.clear();
 				debugCellDestination = maze->cell2pix(cell);
 				debugCellOrigin = maze->graph->GetNodeFromVector2D(agents[0]->getPosition())->position;
-				/*
 				for (auto cell : agents[0]->pathFinding->CalculatePath(maze->graph, debugCellOrigin, debugCellDestination).points)
 				{
 					path.push_back(cell);
 				}
-				*/
-				agents[0]->CalculatePathFinding(maze->graph,maze->cell2pix(cell));
+				//agents[0]->CalculatePathFinding(maze->graph,maze->cell2pix(cell));
 			}
 		}
 		break;

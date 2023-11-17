@@ -1,5 +1,6 @@
 #include "Agent.h"
 #include "Greedy.h"
+#include "Dikjstra.h"
 using namespace std;
 
 Agent::Agent() : sprite_texture(0),
@@ -16,7 +17,7 @@ Agent::Agent() : sprite_texture(0),
 	sprite_h(0),
 	draw_sprite(false)
 {
-	pathFinding = new Greedy();
+	pathFinding = new Dikjstra();
 }
 
 Agent::~Agent()
